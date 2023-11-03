@@ -6,7 +6,7 @@
 #    By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/03 10:34:03 by soelalou          #+#    #+#              #
-#    Updated: 2023/11/03 18:26:38 by soelalou         ###   ########.fr        #
+#    Updated: 2023/11/03 22:21:33 by soelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ CC	=	gcc
 CCFLAGS	=	-Wall -Wextra -Werror
 
 BIN	=	bin
-SRC	=	ft_putnbr.c ft_putchar.c
+SRC	=	ft_printf.c ft_putaddr.c ft_putchar.c ft_putnbr.c \
+		ft_putstr.c ft_putunbr.c ft_strlen.c
 OBJ	=	$(addprefix $(BIN)/, $(SRC:.c=.o))
 
 

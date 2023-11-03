@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:21:22 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 21:41:49 by soelalou         ###   ########.fr       */
+/*   Created: 2023/11/03 21:03:39 by soelalou          #+#    #+#             */
+/*   Updated: 2023/11/03 21:27:33 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
-
-int	ft_putchar(char c)
+int	ft_strlen(const char *str)
 {
-	write(1, &c, 1);
-	return (1);
+	int		i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

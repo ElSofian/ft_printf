@@ -6,14 +6,21 @@
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:21:44 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 20:24:00 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:03:47 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-void	ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
-	while (*str)
-		ft_putchar(*str++);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (i);
 }

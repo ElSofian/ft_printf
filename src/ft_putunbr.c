@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:21:22 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 21:41:49 by soelalou         ###   ########.fr       */
+/*   Created: 2023/11/03 22:17:36 by soelalou          #+#    #+#             */
+/*   Updated: 2023/11/03 22:26:22 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int	ft_putchar(char c)
+int	ft_putunbr(unsigned int nbr)
 {
-	write(1, &c, 1);
-	return (1);
+	static int	i;
+
+	i = 0;
+	if (nbr > 9)
+	{
+		ft_putunbr(nbr / 10);
+		ft_putchar(nbr % 10 + '0');
+		i++;
+	}
+	else
+	{
+		ft_putchar(nbr + '0');
+		i++;
+	}
+	return (i);
 }
