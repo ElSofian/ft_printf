@@ -6,11 +6,11 @@
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:19:24 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 22:03:51 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/04 16:04:49 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../inc/ft_printf.h"
 
 int	ft_putnbr(int nb)
 {

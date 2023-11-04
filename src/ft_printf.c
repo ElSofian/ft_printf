@@ -6,11 +6,11 @@
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:23:37 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 22:29:48 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/04 16:14:06 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../inc/ft_printf.h"
 
 int	put_hex(unsigned int nb, char *base)
 {
@@ -53,14 +53,16 @@ int	print_var(va_list ap, const char format)
 	else if (format == '%')
 		i += ft_putchar('%');
 	else
-		return (-1);
+	{
+		i += ft_putchar('%');
+		i += ft_putchar(format);
+	}
 	return (i);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	int		i;
-	int		j;
 	va_list	ap;
 
 	if (!format)
@@ -72,10 +74,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			j = print_var(ap, *format);
-			if (j == -1)
-				return (-1);
-			i += j;
+			i += print_var(ap, *format);
 		}
 		else
 			i += ft_putchar(*format);
@@ -89,16 +88,16 @@ int	ft_printf(const char *format, ...)
 // {
 // 	int		i;
 // 	char	c;
-//
+
 // 	c = 'c';
 // 	i = ft_printf("Hello World\nMy name is %s, I'm a student at %x Paris.
-//	\nThe first letter of my first name is %p
-//	\nThere is a pourcentage character: %%.\n", "Sofian", 1000, &c);
+// 	\nThe first letter of my first name is %p
+// 	\nThere is a pourcentage character: %%.\n", "Sofian", 1000, &c);
 // 	ft_printf("Return value : %d\n", i);
 // 	printf("\n-----------------------\n");
 // 	i = printf("Hello World\nMy name is %s, I'm a student at %x Paris.
-//	\nThe first letter of my first name is %p
-//	\nThere is a pourcentage character: %%.\n", "Sofian", 1000, &c);
+// 	\nThe first letter of my first name is %p
+// 	\nThere is a pourcentage character: %%.\n", "Sofian", 1000, &c);
 // 	printf("Return value : %d\n", i);
 // 	return (0);
 // }

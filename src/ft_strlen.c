@@ -6,9 +6,11 @@
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:03:39 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 21:27:33 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/04 16:04:04 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../inc/ft_printf.h"
 
 int	ft_strlen(const char *str)
 {

@@ -6,11 +6,11 @@
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:13:41 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 22:06:07 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/04 16:05:01 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../inc/ft_printf.h"
 
 int	ft_putaddr(void *addr)
 {

@@ -6,11 +6,11 @@
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:21:22 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/03 21:41:49 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/04 16:04:58 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../inc/ft_printf.h"
 
 int	ft_putchar(char c)
 {
