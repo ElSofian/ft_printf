@@ -6,7 +6,7 @@
 /*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:23:37 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/04 16:14:06 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/12 15:36:33 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,6 @@ int	print_var(va_list ap, const char format)
 		i += put_hex(va_arg(ap, unsigned int), "0123456789ABCDEF");
 	else if (format == '%')
 		i += ft_putchar('%');
-	else
-	{
-		i += ft_putchar('%');
-		i += ft_putchar(format);
-	}
 	return (i);
 }
 
@@ -84,20 +79,29 @@ int	ft_printf(const char *format, ...)
 	return (i);
 }
 
+// #include "limits.h"
 // int	main(void)
 // {
 // 	int		i;
-// 	char	c;
+// 	// char	*str;
 
-// 	c = 'c';
-// 	i = ft_printf("Hello World\nMy name is %s, I'm a student at %x Paris.
-// 	\nThe first letter of my first name is %p
-// 	\nThere is a pourcentage character: %%.\n", "Sofian", 1000, &c);
-// 	ft_printf("Return value : %d\n", i);
+// 	// str = "h";
+// 	i = ft_printf("%s, %d", "gg", 10);
+// 	ft_printf("\nReturn value : %d\n", i);
 // 	printf("\n-----------------------\n");
-// 	i = printf("Hello World\nMy name is %s, I'm a student at %x Paris.
-// 	\nThe first letter of my first name is %p
-// 	\nThere is a pourcentage character: %%.\n", "Sofian", 1000, &c);
-// 	printf("Return value : %d\n", i);
-// 	return (0);
+// 	i = printf("%s, %d", "gg", 10);
+// 	printf("\nReturn value : %d\n", i);
+// 	// c = 'S';
+// 	// i = ft_printf("Hello World\nMy name is %s, I'm a student at %i Paris based in %d.
+//  	// \nThe pointer on the first letter of my first name is %p
+//  	// \n42 is hexa is %x and in HEXA is %X, a little bonus for the unsigned one : %u
+//  	// \nThere is a pourcentage character: %%.\n", "Sofian", 42, 75017, &c, 42, 42, 42);
+//  	// ft_printf("Return value : %d\n", i);
+//  	// printf("\n-----------------------\n");
+//  	// i = printf("Hello World\nMy name is %s, I'm a student at %i Paris based im %d.
+//  	// \nThe pointer on the first letter of my first name is %p
+//  	// \n42 is hexa is %x and in HEXA is %X, a little bonus for the unsigned one : %u
+//  	// \nThere is a pourcentage character: %%.\n", "Sofian", 42, 75017, &c, 42, 42, 42);
+//  	// printf("Return value : %d\n", i);
+//  	return (0);
 // }
