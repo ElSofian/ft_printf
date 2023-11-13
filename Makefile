@@ -6,7 +6,7 @@
 #    By: soelalou <soelalou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/03 10:34:03 by soelalou          #+#    #+#              #
-#    Updated: 2023/11/13 10:08:02 by soelalou         ###   ########.fr        #
+#    Updated: 2023/11/13 10:24:20 by soelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@
 # VARIABLES
 
 NAME	=	libftprintf.a
-EXEC	=	ft_print
 CC	=	gcc
 CCFLAGS	=	-Wall -Wextra -Werror
 
@@ -58,7 +57,7 @@ clean:
 	@echo "$(GREY)[Clean]$(END_COLOR) Objects have been deleted !"
 
 fclean:	clean
-	@rm -rf $(NAME) $(EXEC)
+	@rm -rf $(NAME) a.out
 	@echo "$(GREY)[Clean]$(END_COLOR) Libftprintf.a & executable has been deleted !"
 
 re: fclean all
