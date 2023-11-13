@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
+/*   By: soelalou <soelalou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:23:37 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/12 15:36:33 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/13 10:14:48 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,25 +83,25 @@ int	ft_printf(const char *format, ...)
 // int	main(void)
 // {
 // 	int		i;
-// 	// char	*str;
+// 	char	c;
 
-// 	// str = "h";
-// 	i = ft_printf("%s, %d", "gg", 10);
-// 	ft_printf("\nReturn value : %d\n", i);
-// 	printf("\n-----------------------\n");
-// 	i = printf("%s, %d", "gg", 10);
-// 	printf("\nReturn value : %d\n", i);
-// 	// c = 'S';
-// 	// i = ft_printf("Hello World\nMy name is %s, I'm a student at %i Paris based in %d.
-//  	// \nThe pointer on the first letter of my first name is %p
-//  	// \n42 is hexa is %x and in HEXA is %X, a little bonus for the unsigned one : %u
-//  	// \nThere is a pourcentage character: %%.\n", "Sofian", 42, 75017, &c, 42, 42, 42);
-//  	// ft_printf("Return value : %d\n", i);
-//  	// printf("\n-----------------------\n");
-//  	// i = printf("Hello World\nMy name is %s, I'm a student at %i Paris based im %d.
-//  	// \nThe pointer on the first letter of my first name is %p
-//  	// \n42 is hexa is %x and in HEXA is %X, a little bonus for the unsigned one : %u
-//  	// \nThere is a pourcentage character: %%.\n", "Sofian", 42, 75017, &c, 42, 42, 42);
-//  	// printf("Return value : %d\n", i);
+// 	c = 'S';
+// 	i = ft_printf("Hello World\nMy name is %s,
+// 	I'm a student at %i Paris based in %d.
+//  	\nThe pointer on the first letter of my first name is %p
+//  	\n42 is hexa is %x and in HEXA is %X,
+// 	a little bonus for the unsigned one : %u
+//  	\nThere is a pourcentage character: %%.\n", "Sofian", 
+//	42, 75017, &c, 42, 42, 42);
+//  	ft_printf("Return value : %d\n", i);
+//  	printf("\n-----------------------\n");
+//  	i = printf("Hello World\nMy name is %s,
+// 	I'm a student at %i Paris based im %d.
+//  	\nThe pointer on the first letter of my first name is %p
+//  	\n42 is hexa is %x and in HEXA is %X,
+// 	a little bonus for the unsigned one : %u
+//  	\nThere is a pourcentage character: %%.\n", "Sofian",
+//	42, 75017, &c, 42, 42, 42);
+//  	printf("Return value : %d\n", i);
 //  	return (0);
 // }

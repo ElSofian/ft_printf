@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+         #
+#    By: soelalou <soelalou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/03 10:34:03 by soelalou          #+#    #+#              #
-#    Updated: 2023/11/03 22:31:08 by soelalou         ###   ########.fr        #
+#    Updated: 2023/11/13 10:08:02 by soelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJ	=	$(addprefix $(BIN)/, $(SRC:.c=.o))
 
 GREEN		= \033[0;32m
 GREY		= \033[1;30m
-PURPLE		= \033[0;93m
+YELLOW		= \033[0;93m
 BLUE		= \033[0;94m
 CYAN		= \033[0;36m
 END_COLOR	= \033[0;39m
@@ -42,10 +42,10 @@ all: $(NAME)
 
 $(BIN)/%.o: src/%.c | $(BIN)
 	@echo "$(BLUE)[Compiling]$(END_COLOR) $<"
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CCFLAGS) -c $< -o $@
 
 $(BIN):
-	@echo "$(PURPLE)[BIN]$(END_COLOR) Creating bin folder"
+	@echo "$(YELLOW)[BIN]$(END_COLOR) Creating bin folder"
 	@mkdir -p $(BIN)
 
 $(NAME): $(BIN) $(OBJ)
