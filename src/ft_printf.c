@@ -6,7 +6,7 @@
 /*   By: soelalou <soelalou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:23:37 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/13 10:23:14 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:07:33 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ int	print_var(va_list ap, const char format)
 		i += put_hex(va_arg(ap, unsigned int), "0123456789ABCDEF");
 	else if (format == '%')
 		i += ft_putchar('%');
+	else
+	{
+		ft_putstr("%(INVALID_FLAG)");
+		i++;
+	}
 	return (i);
 }
 
@@ -79,7 +84,6 @@ int	ft_printf(const char *format, ...)
 	return (i);
 }
 
-// #include "limits.h"
 // int	main(void)
 // {
 // 	int		i;
@@ -91,7 +95,7 @@ int	ft_printf(const char *format, ...)
 //  	\nThe pointer on the first letter of my first name is %p
 //  	\n42 is hexa is %x and in HEXA is %X,
 // 	a little bonus for the unsigned one : %u
-//  	\nThere is a pourcentage character: %%.\n", "Sofian",
+//  	\nThere is a pourcentage character: %T.\n", "Sofian",
 // 	42, 75017, &c, 42, 42, 42);
 //  	ft_printf("Return value : %d\n", i);
 //  	printf("\n-----------------------\n");
@@ -100,7 +104,7 @@ int	ft_printf(const char *format, ...)
 //  	\nThe pointer on the first letter of my first name is %p
 //  	\n42 is hexa is %x and in HEXA is %X,
 // 	a little bonus for the unsigned one : %u
-//  	\nThere is a pourcentage character: %%.\n", "Sofian",
+//  	\nThere is a pourcentage character: %T.\n", "Sofian",
 // 	42, 75017, &c, 42, 42, 42);
 //  	printf("Return value : %d\n", i);
 //  	return (0);

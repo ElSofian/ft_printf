@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soelalou <soelalou@42.student.fr>          +#+  +:+       +#+        */
+/*   By: soelalou <soelalou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:19:52 by soelalou          #+#    #+#             */
-/*   Updated: 2023/11/04 16:14:47 by soelalou         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:08:08 by soelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <stdarg.h>
+// A enlever hors correction
+// # include <stdio.h>
+// -------------------------
 
 int		print_var(va_list ap, const char format);
 int		put_hex(unsigned int nb, char *base);
