@@ -14,12 +14,11 @@
 # VARIABLES
 
 NAME	=	libftprintf.a
-CC	=	gcc
-CCFLAGS	=	-Wall -Wextra -Werror
+CC		=	cc
+CCFLAGS	=	-Wall -Wextra -Werror -Iinc -g3
 
 BIN	=	bin
-SRC	=	ft_printf.c ft_putaddr.c ft_putchar.c ft_putnbr.c \
-		ft_putstr.c ft_putunbr.c ft_strlen.c
+SRC	=	ft_printf.c bonus.c parse.c utils.c
 OBJ	=	$(addprefix $(BIN)/, $(SRC:.c=.o))
 
 
